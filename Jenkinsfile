@@ -15,7 +15,6 @@ pipeline {
             }
         }
 
-        // ✅ Run Calculator Main (your h2 package)
         stage('Run Calculator Main') {
             steps {
                 bat 'java -cp target/classes h2.App'
@@ -41,4 +40,4 @@ pipeline {
             }
         }
     }
-}S
+}
