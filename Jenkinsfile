@@ -36,7 +36,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 8065:8080 greeting-api'
+                bat 'docker run -d -p 8067:8080 greeting-api'
             }
         }
     }
