@@ -15,6 +15,13 @@ pipeline {
             }
         }
 
+        // ✅ Run Calculator Main (your h2 package)
+        stage('Run Calculator Main') {
+            steps {
+                bat 'java -cp target/classes h2.App'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 bat '"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" build -t greeting-api .'
@@ -30,8 +37,8 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 8085:8080 greeting-api'
+                bat 'docker run -d -p 8065:8080 greeting-api'
             }
         }
     }
-}
+}S
